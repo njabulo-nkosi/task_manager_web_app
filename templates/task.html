@@ -1,0 +1,42 @@
+{% include "header.html" %}
+
+<!-- Task Content -->
+<div class="container py-4">
+    <header class="pb-3 mb-4 border-bottom">
+      <a href="#" class="d-flex align-items-center text-body-emphasis text-decoration-none">
+        <span class="fs-4" style="color: black">{{ task.name }}</span>
+      </a>
+    </header>
+
+    <div class="p-5 mb-4 bg-body-tertiary rounded-3"  style="background-image: url('/static/glenn-carstens-peters-RLw-UC03Gwc-unsplash.jpg'); background-size: cover; background-position: center;">
+      <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">{{ task.status }}</h1>
+        <p class="col-md-8 fs-4">
+      Task: {{ task.name }}, Day: {{ task.day }}, Time: {{ task.time }}, Location: {{ task.location }},
+      Reminder: {{ task.reminder }}, Priority: {{ task.priority }}, Category: {{ task.category }}
+    </p>
+        <button class="btn btn-primary btn-lg" type="button" style="background-color: #22177A; border-color: #22177A;">Mark as Complete</button>
+      </div>
+    </div>
+
+    <div class="row align-items-md-stretch">
+      <div class="col-md-6">
+        <div class="h-100 p-5 text-bg-dark rounded-3">
+          <h2>{{ task.assigned_to }}</h2>
+          <p>Please refer to the relevant team lead for additional info and editing of tasks</p>
+          <button class="btn btn-outline-light" type="button">Edit Task</button>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="h-100 p-5 bg-body-tertiary border rounded-3">
+          <h2>Additional Information</h2>
+          <p>Ensure to review all details related to the task before marking it as complete.</p>
+          <button class="btn btn-outline-secondary" type="button">View Task Log</button>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+{% include "footer.html" %}
